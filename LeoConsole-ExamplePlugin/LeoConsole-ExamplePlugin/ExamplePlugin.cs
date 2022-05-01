@@ -21,7 +21,7 @@ namespace LeoConsole_ExamplePlugin
         private List<ICommand> _Commands;
         public List<ICommand> Commands { get { return _Commands; } set { _Commands = value; } }
 
-        public void PluginMain()
+        public void PluginInit()
         {
             // Add Data
 
@@ -32,6 +32,19 @@ namespace LeoConsole_ExamplePlugin
 
             _Commands = new List<ICommand>();
             _Commands.Add(new randomNumber());
+        }
+
+        public void PluginMain()
+        {
+            Console.WriteLine("PluginMain()");
+            Console.WriteLine("LeoConsole v" + _data.Version);
+        }
+
+        public void PluginShutdown()
+        {
+
+            Console.WriteLine("Good Bye!");
+            Console.ReadLine();
         }
     }
 }

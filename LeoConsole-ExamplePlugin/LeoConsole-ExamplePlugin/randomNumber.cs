@@ -17,6 +17,8 @@ namespace LeoConsole_ExamplePlugin
         public string SavePath { get { return _SavePath; } set { _SavePath = value; } }
         public static string _DownloadPath;
         public string DownloadPath { get { return _DownloadPath; } set { _DownloadPath = value; } }
+        public static string _Version;
+        public string Version { get { return _Version; } set { _Version = value; } }
     }
 
     public class randomNumber : ICommand
